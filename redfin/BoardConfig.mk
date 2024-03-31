@@ -14,11 +14,8 @@
 # limitations under the License.
 #
 
-ifdef AUTOMOTIVE_PRODUCT_PATH
-  #RBC# include_top device/google/auto_tcu
-  #RBC# include_top device/google/pixel_tcu
-  #RBC# include_top device/google_car
-  include device/$(AUTOMOTIVE_PRODUCT_PATH)/BoardConfig.mk
+ifdef PHONE_CAR_BOARD_PRODUCT
+  include device/google_car/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
 else
   TARGET_BOOTLOADER_BOARD_NAME := redfin
   TARGET_SCREEN_DENSITY := 440
